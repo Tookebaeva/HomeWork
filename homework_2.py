@@ -34,6 +34,7 @@ class Rectangle(Figure):
     def info(self):
         print(f'Rectangle length: {self.__length},  width: {self.__width},   area: {self.calculate_area()}{self.unit}')
 
+
 figures = [Square(5), Square(3),
 Rectangle(5, 8),
 Rectangle(4, 6),
