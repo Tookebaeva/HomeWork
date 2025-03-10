@@ -60,10 +60,12 @@ class SmartPhone(Computer, Phone):
     def __init__(self, cpu, memory, sim_cards_list):
         Computer.__init__(self, cpu, memory)
         Phone.__init__(self, sim_cards_list)
+    def use_gps(self, location):
+        return f"построение маршрута до {location}"
     def __str__(self):
         return f"SmartPhone(cpu={self.get_cpu()}, memory={self.get_memory()}, sim_cards_list={self.get_sim_cards_list()})"
 
 smartphone1 = SmartPhone(2.8, 8, ["O!", "Tel2"])
 print(smartphone1)
-
+print(smartphone1.use_gps("Home"))
 print(computer > smartphone1)
